@@ -41,14 +41,7 @@ const KommuneSok: React.FC = () => {
         <div className="kommunesok">
             Kommunesøk skal være her.
 
-            <EnkelModal
-                className="modal kommunesok_modal"
-                isOpen={true}
-                onRequestClose={() => onCloseModal()}
-                closeButton={true}
-                contentLabel="Vedlegg"
-                shouldCloseOnOverlayClick={true}
-            >
+
                 {kommunerService.restStatus === REST_STATUS.OK && (
                     <NavAutocomplete
                         placeholder="Skriv kommunenavn"
@@ -62,7 +55,6 @@ const KommuneSok: React.FC = () => {
                         }
                     />
                 )}
-            </EnkelModal>
 
                 <br/>
             <pre>
